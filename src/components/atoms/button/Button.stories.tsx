@@ -7,12 +7,27 @@ export default {
   component: Button,
 };
 
-const Template: Story = () => {
+const Template: Story = ({ onClick, href }) => {
   return (
     <div>
-      <Button>예제입니다.</Button>
+      <Button href={href} onClick={onClick}>
+        예제입니다.
+      </Button>
     </div>
   );
 };
 
 export const Default = Template.bind({});
+Default.args = {
+  onClick: () => {
+    console.log("hello");
+  },
+};
+
+export const LinkButton = Template.bind({});
+LinkButton.args = {
+  href: "/router",
+  onClick: () => {
+    console.log("hello");
+  },
+};

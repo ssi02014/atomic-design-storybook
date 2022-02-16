@@ -1,17 +1,24 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 
 interface Props {
   children: React.ReactNode;
+  href?: string;
+  onClick: () => void;
 }
 
-const Button = ({ children }: Props) => {
+const Button = ({ children, href, onClick }: Props) => {
   const theme = useTheme();
 
   return (
     <>
-      <StyledButton>{children}</StyledButton>
+      {href ? (
+        <Link to={href}>링크</Link>
+      ) : (
+        <StyledButton onClick={onClick}>{children}</StyledButton>
+      )}
     </>
   );
 };
