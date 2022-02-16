@@ -1,9 +1,13 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+import { BrowserRouter } from "react-router-dom";
+import GlobalStyle from "../src/components/GlobalStyles";
+
+export const decorators = [
+  (Story) => {
+    return (
+      <BrowserRouter>
+        <GlobalStyle />
+        <Story />
+      </BrowserRouter>
+    );
   },
-}
+];
