@@ -7,7 +7,7 @@ export default {
   component: Example,
 };
 
-const Template: Story = ({}) => {
+const Template: Story = () => {
   return (
     <div>
       <Example />
