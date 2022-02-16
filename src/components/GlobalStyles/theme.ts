@@ -1,6 +1,7 @@
 const theme = {
   colors: {
     primary: "rebeccapurple",
+    secondary: "skyBlue",
   },
 };
 

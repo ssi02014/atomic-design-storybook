@@ -1,33 +1,32 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
+import { StyledButton, StyledLinkButton } from "./Button.style";
 
 interface Props {
   children: React.ReactNode;
+  variant?: string;
   href?: string;
   onClick: () => void;
 }
 
-const Button = ({ children, href, onClick }: Props) => {
+const Button = ({ children, href, variant = "primary", onClick }: Props) => {
   const theme = useTheme();
 
+  console.log(variant);
   return (
     <>
       {href ? (
-        <Link to={href}>링크</Link>
+        <StyledLinkButton variant={variant}>
+          <Link to={href}>링크</Link>
+        </StyledLinkButton>
       ) : (
-        <StyledButton onClick={onClick}>{children}</StyledButton>
+        <StyledButton variant={variant} onClick={onClick}>
+          {children}
+        </StyledButton>
       )}
     </>
   );
 };
-
-const StyledButton = styled.button`
-  background-color: red;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-`;
 
 export default Button;

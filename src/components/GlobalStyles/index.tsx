@@ -10,7 +10,7 @@ const reset = css`
   }
 
   body {
-    background-color: ${theme.colors.primary};
+    background-color: #fff;
   }
 `;
 
