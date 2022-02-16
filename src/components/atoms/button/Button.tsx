@@ -8,11 +8,10 @@ interface Props {
 
 const Button = ({ children }: Props) => {
   const theme = useTheme();
-  console.log(theme);
+
   return (
     <>
       <StyledButton>{children}</StyledButton>
-      <ThemeButton>{children}</ThemeButton>
     </>
   );
 };
@@ -22,10 +21,6 @@ const StyledButton = styled.button`
   color: #fff;
   border: none;
   cursor: pointer;
-`;
-
-const ThemeButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 export default Button;

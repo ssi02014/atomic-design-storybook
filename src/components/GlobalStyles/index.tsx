@@ -1,5 +1,6 @@
 import React from "react";
-import { Global, css, ThemeProvider } from "@emotion/react";
+import { Global, css } from "@emotion/react";
+import theme from "./theme";
 
 const reset = css`
   * {
@@ -9,8 +10,10 @@ const reset = css`
   }
 
   body {
+    background-color: ${theme.colors.primary};
   }
 `;
+
 const GlobalStyles = () => {
   return (
     <>
