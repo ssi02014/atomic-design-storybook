@@ -15,6 +15,8 @@ const buttonBackground = ({ theme, variant }: Props) => {
 };
 
 export const StyledButton = styled.button<ButtonTypes>`
+  display: flex;
+  align-items: center;
   padding: 16px;
   background-color: ${(props) => buttonBackground(props)};
   color: #fff;
@@ -27,6 +29,10 @@ export const StyledButton = styled.button<ButtonTypes>`
   white-space: nowrap;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0);
+
+  span {
+    margin-right: 5px;
+  }
 `;
 
 export const StyledLinkButton = styled(StyledButton)<ButtonTypes>`

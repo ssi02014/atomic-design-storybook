@@ -9,7 +9,9 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <div className="App">{/* <Button>예제</Button> */}</div>
+        <div className="App">
+          <Button onClick={() => {}}>예제</Button>
+        </div>
       </ThemeProvider>
     </>
   );
