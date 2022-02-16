@@ -1,16 +1,16 @@
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
-import Example from "../components/Example";
+import Button from "./Button";
 
 export default {
   title: "Components/Button",
-  component: Example,
+  component: Button,
 };
 
 const Template: Story = () => {
   return (
     <div>
-      <Example />
+      <Button>예제입니다.</Button>
     </div>
   );
 };

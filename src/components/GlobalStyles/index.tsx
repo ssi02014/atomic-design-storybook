@@ -1,5 +1,5 @@
 import React from "react";
-import { Global, css } from "@emotion/react";
+import { Global, css, ThemeProvider } from "@emotion/react";
 
 const reset = css`
   * {
@@ -7,9 +7,16 @@ const reset = css`
     padding: 0;
     box-sizing: border-box;
   }
+
+  body {
+  }
 `;
 const GlobalStyles = () => {
-  return <Global styles={reset}></Global>;
+  return (
+    <>
+      <Global styles={reset}></Global>
+    </>
+  );
 };
 
 export default GlobalStyles;
