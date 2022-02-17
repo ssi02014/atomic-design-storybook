@@ -7,12 +7,11 @@ export interface Items {
 }
 
 interface Props {
-  direction: string;
+  direction?: string;
   items: Items[];
 }
 
-const Navigation = ({ direction, items = [] }: Props) => {
-  console.log(items);
+const Navigation = ({ direction = "horizontal", items = [] }: Props) => {
   return (
     <StyledNavigation direction={direction}>
       {items.map((item, idx) => (
