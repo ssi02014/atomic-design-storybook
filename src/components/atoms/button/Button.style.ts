@@ -3,22 +3,14 @@ import { Theme } from "@emotion/react";
 
 interface ButtonTypes {
   variant: string;
-}
-interface Props {
   theme: Theme;
-  variant: string;
 }
-
-const buttonBackground = ({ theme, variant }: Props) => {
-  if (variant === "primary") return theme.colors.primary;
-  return theme.colors.secondary;
-};
 
 export const StyledButton = styled.button<ButtonTypes>`
   display: flex;
   align-items: center;
   padding: 16px;
-  background-color: ${(props) => buttonBackground(props)};
+  background-color: ${({ theme, variant }) => theme.colors[variant]};
   color: #fff;
   border: none;
   font-weight: 700;

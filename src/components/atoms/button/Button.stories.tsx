@@ -19,6 +19,7 @@ const Template: Story = ({ onClick, href, variant, icon }) => {
 
 export const Default = Template.bind({});
 Default.args = {
+  variant: "primary",
   onClick: () => {
     console.log("hello");
   },

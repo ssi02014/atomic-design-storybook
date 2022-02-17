@@ -46,17 +46,15 @@ const Button = ({
     cancel: <IconCancel />,
   };
 
-  console.log(theme);
-  console.log(icons);
   return (
     <>
       {href ? (
-        <StyledLinkButton variant={variant}>
+        <StyledLinkButton theme={theme} variant={variant}>
           {icon && <ButtonIcon name={icon} icons={icons} />}
           <Link to={href}>링크</Link>
         </StyledLinkButton>
       ) : (
-        <StyledButton variant={variant} onClick={onClick}>
+        <StyledButton theme={theme} variant={variant} onClick={onClick}>
           {icon && <ButtonIcon name={icon} icons={icons} />}
           {children}
         </StyledButton>
