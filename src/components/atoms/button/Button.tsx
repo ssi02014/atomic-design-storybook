@@ -9,12 +9,7 @@ import { ReactComponent as IconUser } from "../../../assets/images/user.svg";
 import { ReactComponent as IconCancel } from "../../../assets/images/x.svg";
 
 interface Icons {
-  plus: React.ReactNode;
-  bag: React.ReactNode;
-  cart: React.ReactNode;
-  user: React.ReactNode;
-  cancel: React.ReactNode;
-  [propsName: string]: React.ReactNode;
+  [iconName: string]: React.ReactNode;
 }
 
 interface ButtonProps {
