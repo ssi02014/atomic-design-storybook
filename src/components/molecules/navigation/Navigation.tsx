@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledNavigation } from "./Navigation.style";
 
-interface Items {
+export interface Items {
   title: string;
   url: string;
 }
@@ -12,6 +12,7 @@ interface Props {
 }
 
 const Navigation = ({ direction, items = [] }: Props) => {
+  console.log(items);
   return (
     <StyledNavigation direction={direction}>
       {items.map((item, idx) => (
