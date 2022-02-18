@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import React from "react";
 import Navigation, { Items } from "../../molecules/navigation/Navigation";
 import { StyledFooter } from "./Footer.styles";
@@ -10,8 +11,9 @@ interface Props {
   menus: Menu[];
 }
 const Footer = ({ menus = [] }: Props) => {
+  const theme = useTheme();
   return (
-    <StyledFooter>
+    <StyledFooter theme={theme}>
       <div className="footer-wrapper">
         <nav className="footer-contents">
           {menus.map(({ title, items }) => (
